@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet"  href="/static/reg.css">
+    <script src="/static/reg.js"></script>
+</head>
+<body>
+    <div class="box">
+        <span class = "borderLine"></span>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <video  width="90px" height="90px" autoplay muted loop id="myVideo">
+                <source src="static/assests/scn.mp4" type="video/mp4">
+            </video>
+            <h2> Create Account </h2>
+            <div class ="inputBox">
+                <input type="email" name="email" required="required">
+                <span>Email</span>
+                <i></i>
+            </div>
+            <!-- <br> -->
+            <div class ="inputBox">
+                <input type="password" name="password" required="required">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <!-- <br> -->
+            <div class ="inputBox">
+                <input type="text" name="username" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <br>
+            <div class ="inputfile">
+                <span>Select Photo</span>
+                <i></i>
+                <input type="file" name="file" accept=".jpg, .png" required="required" hidden>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class ="create">Create Account</button>
+        </form>
+        <div id="overlay" style="display: none;"></div>
+        <video id="loader" src="/static/assests/scn.mp4" style="display: none;" autoplay loop></video>
+    </div>
+</body>
+</html>

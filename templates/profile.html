@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/profile.css">
+</head>
+<body>
+    <div class="box">
+        <span class = "borderLine"></span>
+        <div class = "container">
+            <img class="profile-image" src="data:image/jpeg;base64,{{ image }}" alt ="loading..." />
+            <div class="Welcome">Welcome {{username}}!</div>
+            <div class="Welcome">Congratulations, You are Logged In !!! </div>
+            <div class="email"> Your email is {{email}}! 🤗 </div>
+            <div class="logout">
+                <a href="/logout">
+                    <button type="button" class="btn">Logout</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

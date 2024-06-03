@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet"  href="/static/index.css">
+    <script src="/static/index.js"></script>
+</head>
+<body>
+    <div class="box">
+        <span class = "borderLine"></span>
+        <form>
+            <div class = "container">
+                <div class="content">
+                    <h1>Manushya :</h1>
+                    <h2>Welcome to our Face Authenticator</h1>
+                    <p>Manushya is a face authenticator that uses face recognition to authenticate users. It is a secure and easy way to authenticate users.</p>
+                    <h3>How it Works:</h3>
+                    <p><b>1. Register : </b> Begin by registering your account with us. Simply provide a photo of your face, along with your email address, username, and password. This information will be securely stored in our system.</p>
+                    <p><b>2. Login: </b> The next time you visit our site, instead of typing in your username and password, simply allow our system to scan your face using your device's camera. Within seconds, you'll be securely logged in to your account.</p>
+
+                </div>
+
+                <div class = "buttons">
+                    <a href="/login" >
+                        <button type="button" class="button1">Login</button>
+                    </a>
+                    <a href="/register">
+                        <button type = "button" class="button2">Register</button>
+                    </a>
+                </div>
+                <div id="overlay" style="display: none;"></div>
+                <video id="loader" src="/static/assests/scn.mp4" style="display: none;" autoplay loop></video>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

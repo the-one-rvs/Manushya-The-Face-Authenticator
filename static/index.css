@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+.box
+{
+    position: relative;
+    width: 500px;
+    height: 700px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#aaf12f,#f7eb0e,#c8ef19);
+    transform-origin: bottom right;
+    z-index: 1;
+    animation: animate 6s linear infinite;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#aaf12f,#f7eb0e,#c8ef19);
+    transform-origin: bottom right;
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#cd2ff1,#0e4cf7,#ef19c8);
+    transform-origin: bottom right;
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#cd2ff1,#0e4cf7,#ef19c8);
+    transform-origin: bottom right;
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.box form
+{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.content h2{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.content p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    padding: 0 25px; /* Add horizontal padding */
+}
+
+.button1 {
+    background: linear-gradient(to right, orange, yellow);
+    color: black; /* Change text color to black */
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button2 {
+    background: linear-gradient(to right, orange, yellow);
+    color: rgb(15, 15, 15);
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+#loader {
+    position: fixed; /* Position the video over the content */
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 1000; /* Make sure the video is on top */
+    display: none; /* Hide the video initially */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+#overlay {
+    position: fixed; /* Position the overlay over the content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61, 56, 56, 0.7); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    z-index: 999; /* Make sure the overlay is below the video */
+}
+
+.blur {
+    filter: blur(5px); /* Add a blur effect */
+}
